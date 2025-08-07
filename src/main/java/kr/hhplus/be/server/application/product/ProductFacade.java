@@ -19,7 +19,7 @@ public class ProductFacade {
     }
 
     /**
-     * 새로운 상품을 생성하는 유스케이스를 처리합니다.
+     * 새로운 상품을 생성하는 유스케이스를 처리
      *
      * @param command 상품 생성 요청 데이터
      * @return 생성된 상품의 결과 DTO
@@ -47,7 +47,7 @@ public class ProductFacade {
     }
 
     /**
-     * 특정 ID의 상품을 조회하는 유스케이스를 처리합니다.
+     * 특정 ID의 상품을 조회하는 유스케이스를 처리
      *
      * @param productId 조회할 상품 ID
      * @return 조회된 상품의 결과 DTO
@@ -68,7 +68,7 @@ public class ProductFacade {
     }
 
     /**
-     * 모든 상품을 조회하는 유스케이스를 처리합니다.
+     * 모든 상품을 조회하는 유스케이스를 처리
      *
      * @return 모든 상품의 결과 DTO 리스트
      */
