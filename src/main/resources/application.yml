@@ -6,6 +6,7 @@ spring:
   datasource:
     name: HangHaePlusDataSource
     type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://localhost:3306/hhplus?characterEncoding=UTF-8&serverTimezone=UTC
     hikari:
       maximum-pool-size: 3
       connection-timeout: 10000
@@ -20,12 +21,17 @@ spring:
     properties:
       hibernate.timezone.default_storage: NORMALIZE_UTC
       hibernate.jdbc.time_zone: UTC
+      #dialect: org.hibernate.dialect.MySQL8Dialect   # MySQL8 이상이라면 이걸 추천
+      # 만약 MySQL 5.x면 아래로 바꾸세요.
+      dialect: org.hibernate.dialect.MySQL5InnoDBDialect
 
 ---
-spring.config.activate.on-profile: local, test
-
 spring:
+  config:
+    activate:
+      on-profile: local,test
+
   datasource:
     url: jdbc:mysql://localhost:3306/hhplus?characterEncoding=UTF-8&serverTimezone=UTC
-    username: application
-    password: application
+    username: root
+    password: tiger

@@ -34,9 +34,15 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework:spring-context")
 
     // DB
 	runtimeOnly("com.mysql:mysql-connector-j")
+	implementation ("mysql:mysql-connector-java")
+	implementation("mysql:mysql-connector-java:8.0.33")
+
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	implementation("org.springframework.boot:spring-boot-starter-web")
 
     // Test
     testImplementation("org.springframework.boot:spring-boot-starter-test")
@@ -44,6 +50,9 @@ dependencies {
 	testImplementation("org.testcontainers:junit-jupiter")
 	testImplementation("org.testcontainers:mysql")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
+	//swagger
+	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.4")
 }
 
 tasks.withType<Test> {
